@@ -31,7 +31,7 @@
         "test": "jest",
         "test:coverage": "jest --coverage",
         "pre-commit": "npm test && pretty-quick --staged",
-        "pre-push": "npm test && npm run lint && npm run build",
+        "pre-push": "npm test && npm run lint",
         "prepublishOnly": "npm run pre-push",
         "prepare": "husky install"
     },

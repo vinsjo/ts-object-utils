@@ -1,6 +1,6 @@
 {
     "name": "@vinsjo/ts-object-utils",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A package with some basic Object methods with added TypeScript support",
     "author": "Vincent Sjögren",
     "repository": {

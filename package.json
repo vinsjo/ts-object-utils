@@ -1,0 +1,56 @@
+{
+    "name": "@vinsjo/ts-object-utils",
+    "version": "1.0.0",
+    "description": "A package with some basic Object methods with added TypeScript support",
+    "author": "Vincent Sjögren",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vinsjo/ts-object-utils"
+    },
+    "license": "MIT",
+    "type": "module",
+    "source": "./src/index.ts",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
+    "umd:main": "./dist/index.umd.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        "require": "./dist/index.cjs",
+        "import": "./dist/index.js",
+        "default": "./dist/index.modern.js"
+    },
+    "files": [
+        "src",
+        "dist"
+    ],
+    "scripts": {
+        "build": "microbundle",
+        "dev": "microbundle watch",
+        "lint": "eslint src/** __tests__/** --ext .ts",
+        "format": "prettier --write .",
+        "test": "jest",
+        "test:coverage": "jest --coverage",
+        "pre-commit": "npm test && pretty-quick --staged",
+        "pre-push": "npm test && npm run lint && npm run build",
+        "prepublishOnly": "npm run pre-push",
+        "prepare": "husky install"
+    },
+    "devDependencies": {
+        "@jest/globals": "latest",
+        "@typescript-eslint/eslint-plugin": "latest",
+        "@typescript-eslint/parser": "latest",
+        "eslint": "latest",
+        "microbundle": "latest",
+        "prettier": "latest",
+        "pretty-quick": "latest",
+        "ts-jest": "latest",
+        "husky": "^8.0.0"
+    },
+    "browserslist": [
+        "defaults and supports es6-module",
+        "maintained node versions"
+    ],
+    "keywords": [
+        "TypeScript"
+    ]
+}
